@@ -1,0 +1,61 @@
+class TourPackage:
+    def __init__(self, package_type, transport, food, days, price):
+        self.package_type = package_type
+        self.transport = transport
+        self.food = food
+        self.days = days
+        self.price = price
+
+    def __str__(self):
+        return (f"Type: {self.package_type}, Transport: {self.transport}, "
+                f"Food: {self.food}, Days: {self.days}, Price: {self.price}")
+
+def main():
+    tour_packages = [
+        TourPackage("Отдых", "Самолет", "Все включено", 7, 1000),
+        TourPackage("Экскурсии", "Автобус", "Полупансион", 5, 800),
+        TourPackage("Лечение", "Поезд", "Завтраки", 14, 1500),
+        TourPackage("Шопинг", "Самолет", "Завтраки", 3, 600),
+        TourPackage("Круиз", "Корабль", "Все включено", 10, 2000)
+    ]
+
+    # Ввод пользователя для выбора критериев
+    package_type = input("Выберите тип путевки (Отдых, Экскурсии, Лечение, Шопинг, Круиз): ")
+    transport = input("Выберите транспорт (Самолет, Автобус, Поезд, Корабль): ")
+    food = input("Выберите питание (Все включено, Полупансион, Завтраки): ")
+    min_days = int(input("Минимальное количество дней: "))
+    max_days = int(input("Максимальное количество дней: "))
+
+    # Фильтрация туров по заданным критериям
+    filtered_tours = filter_tours(tour_packages, package_type, transport, food, min_days, max_days)
+
+    # Сортировка туров по цене
+    sorted_tours = sort_tours_by_price(filtered_tours)
+
+    # Вывод отобранных и отсортированных туров
+    if sorted_tours:
+        print("\nОтобранные туры:")
+        for tour in sorted_tours:
+            print(tour)
+    else:
+        print("\nНет туров, соответствующих вашим критериям.")
+
+def filter_tours(tour_packages, package_type=None, transport=None, food=None, min_days=None, max_days=None):
+    filtered_tours = tour_packages
+    if package_type:
+        filtered_tours = [tour for tour in filtered_tours if tour.package_type.lower() == package_type.lower()]
+    if transport:
+        filtered_tours = [tour for tour in filtered_tours if tour.transport.lower() == transport.lower()]
+    if food:
+        filtered_tours = [tour for tour in filtered_tours if tour.food.lower() == food.lower()]
+    if min_days is not None:
+        filtered_tours = [tour for tour in filtered_tours if tour.days >= min_days]
+    if max_days is not None:
+        filtered_tours = [tour for tour in filtered_tours if tour.days <= max_days]
+    return filtered_tours
+
+def sort_tours_by_price(tour_packages):
+    return sorted(tour_packages, key=lambda tour: tour.price)
+
+if __name__ == "__main__":
+    main()

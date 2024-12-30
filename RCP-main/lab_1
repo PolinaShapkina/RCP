@@ -1,0 +1,51 @@
+class Phone:
+    def __init__(self, id, last_name, first_name, patronymic, address,
+                 credit_card_number, debit, credit,
+                 city_call_time, long_distance_call_time):
+        self.id = id
+        self.last_name = last_name
+        self.first_name = first_name
+        self.patronymic = patronymic
+        self.address = address
+        self.credit_card_number = credit_card_number
+        self.debit = debit
+        self.credit = credit
+        self.city_call_time = city_call_time
+        self.long_distance_call_time = long_distance_call_time
+
+    def __str__(self):
+        return (f"Phone(id={self.id}, last_name='{self.last_name}', first_name='{self.first_name}', "
+                f"patronymic='{self.patronymic}', address='{self.address}', "
+                f"credit_card_number='{self.credit_card_number}', debit={self.debit}, "
+                f"credit={self.credit}, city_call_time={self.city_call_time}, "
+                f"long_distance_call_time={self.long_distance_call_time})")
+
+def main():
+    phones = [
+        Phone(1, "Иванов", "Иван", "Иванович", "Москва", "1234-5678-9012-3456", 1000.0, 500.0, 120.5, 30.0),
+        Phone(2, "Петров", "Петр", "Петрович", "Санкт-Петербург", "2345-6789-0123-4567", 1500.0, 700.0, 90.0, 50.0),
+        Phone(3, "Сидоров", "Сидор", "Сидорович", "Казань", "3456-7890-1234-5678", 2000.0, 1000.0, 200.0, 10.0),
+        Phone(4, "Алексеев", "Алексей", "Алексеевич", "Екатеринбург", "4567-8901-2345-6789", 2500.0, 1200.0, 80.0, 60.0)
+    ]
+
+    # a) Вывод сведений об абонентах, у которых время внутригородских разговоров превышает заданное значение.
+    threshold_city_call_time = 100.0  # Заданное значение
+    print(f"Абоненты с временем внутригородских разговоров более {threshold_city_call_time}:")
+    for phone in phones:
+        if phone.city_call_time > threshold_city_call_time:
+            print(phone)
+
+    # b) Сведения об абонентах, которые пользовались междугородной связью.
+    print("\nАбоненты, пользовавшиеся междугородней связью:")
+    for phone in phones:
+        if phone.long_distance_call_time > 0:
+            print(phone)
+
+    # c) Сведения об абонентах в алфавитном порядке.
+    print("\nАбоненты в алфавитном порядке:")
+    sorted_phones = sorted(phones, key=lambda p: p.last_name)
+    for phone in sorted_phones:
+        print(phone)
+
+if __name__ == "__main__":
+    main()

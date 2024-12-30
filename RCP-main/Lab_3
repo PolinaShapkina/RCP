@@ -1,0 +1,138 @@
+1)
+import threading 
+import time 
+import random 
+
+class Pot: 
+    def __init__(self, capacity): 
+        self.capacity = capacity 
+        self.current_amount = capacity 
+        self.lock = threading.Lock() 
+        self.empty_condition = threading.Condition(self.lock) 
+        self.full_condition = threading.Condition(self.lock) 
+
+    def take_portion(self): 
+        with self.lock: 
+            while self.current_amount == 0: 
+                print("Кастрюля пуста. Дикари ждут, пока повар наполнит кастрюлю.") 
+                self.empty_condition.wait() 
+            self.current_amount -= 1 
+            print(f"Дикарь взял порцию. Осталось {self.current_amount} порций.") 
+            if self.current_amount == 0: 
+                self.full_condition.notify() 
+
+    def fill_pot(self): 
+        with self.lock: 
+            while self.current_amount > 0: 
+                self.full_condition.wait() 
+            self.current_amount = self.capacity 
+            print("Повар наполнил кастрюлю.") 
+            self.empty_condition.notify_all() 
+
+def savage(pot, portions_to_take): 
+    for _ in range(portions_to_take):
+        pot.take_portion() 
+        time.sleep(random.uniform(0.5, 1.5))  # Дикарь ест 
+
+def chef(pot, fills_to_do): 
+    for _ in range(fills_to_do):
+        pot.fill_pot() 
+        time.sleep(random.uniform(2, 3))  # Повар готовит 
+
+if __name__ == "__main__": 
+    N = 5  # Вместимость кастрюли 
+    num_savages = 10  # Количество дикарей 
+    portions_per_savage = 3  # Количество порций, которые каждый дикарь может взять
+    fills_for_chef = 5  # Количество раз, когда повар может наполнить кастрюлю
+
+    pot = Pot(N) 
+    
+    # Создаем потоки для дикарей 
+    savages_threads = [threading.Thread(target=savage, args=(pot, portions_per_savage)) for _ in range(num_savages)] 
+    
+    # Создаем поток для повара 
+    chef_thread = threading.Thread(target=chef, args=(pot, fills_for_chef)) 
+    
+    # Запускаем потоки 
+    chef_thread.start() 
+    for thread in savages_threads: 
+        thread.start() 
+    
+    # Ждем завершения потоков 
+    chef_thread.join() 
+    for thread in savages_threads: 
+        thread.join()
+
+2) 
+import threading
+import time
+import random
+
+class Pot:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.current_amount = 0
+        self.lock = threading.Lock()
+        self.empty_condition = threading.Condition(self.lock)
+        self.full_condition = threading.Condition(self.lock)
+
+    def take_portion(self, savage_id):
+        with self.lock:
+            while self.current_amount == 0:
+                print(f"Дикарь {savage_id} ждет, пока повар наполнит кастрюлю.")
+                self.empty_condition.wait()
+            self.current_amount -= 1
+            print(f"Дикарь {savage_id} взял порцию. Осталось {self.current_amount} порций.")
+            if self.current_amount == 0:
+                self.full_condition.notify()
+
+    def fill_pot(self):
+        with self.lock:
+            while self.current_amount > 0:
+                self.full_condition.wait()
+            self.current_amount = self.capacity
+            print("Повар наполнил кастрюлю. Всего порций:", self.current_amount)
+            self.empty_condition.notify_all()
+
+def savage(savage_id, pot, turn, portions_to_take, num_savages):
+    for _ in range(portions_to_take):
+        with pot.lock:
+            while turn[0] != savage_id:
+                pot.empty_condition.wait()
+            pot.take_portion(savage_id)
+            turn[0] = (turn[0] + 1) % num_savages
+            pot.empty_condition.notify_all()
+        time.sleep(0.01)  # Дикарь ест быстрее
+
+def chef(pot, fills_to_do):
+    for _ in range(fills_to_do):
+        pot.fill_pot()
+        time.sleep(0.01)  # Повар готовит быстрее
+
+if __name__ == "__main__":
+    N = 5  # Вместимость кастрюли
+    num_savages = 10  # Количество дикарей
+    portions_per_savage = 3  # Количество порций, которые каждый дикарь может взять
+    fills_for_chef = 5  # Количество раз, когда повар может наполнить кастрюлю
+
+    pot = Pot(N)
+    turn = [0]  # Список для хранения очереди (используем список для передачи по ссылке)
+
+    # Создаем потоки для дикарей
+    savages_threads = [threading.Thread(target=savage, args=(i, pot, turn, portions_per_savage, num_savages)) for i in range(num_savages)]
+
+    # Создаем поток для повара
+    chef_thread = threading.Thread(target=chef, args=(pot, fills_for_chef))
+
+    # Запускаем потоки
+    chef_thread.start()
+    for thread in savages_threads:
+        thread.start()
+
+    # Ждем завершения потоков
+    chef_thread.join()
+    for thread in savages_threads:
+        thread.join()
+
+    print("Все потоки завершили работу.")
+

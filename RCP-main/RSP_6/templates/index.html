@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини сайт для API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мини сайт для выполнения запросов</h1>
+
+    <h2>Запросы к API</h2>
+    <button onclick="callApi('/hello')">Запрос к /hello</button>
+    <button onclick="callApi('/testError')">Запрос к /testError</button>
+    <button onclick="callApi('/time')">Запрос к /time</button>
+
+    <h3>Ответ:</h3>
+    <pre id="response"></pre>
+
+    <script>
+        function callApi(endpoint) {
+            fetch(endpoint)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    document.getElementById('response').textContent = JSON.stringify({error: "Произошла ошибка"}, null, 2);
+                });
+        }
+    </script>
+</body>
+</html>

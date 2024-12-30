@@ -1,0 +1,354 @@
+2024-11-29 12:19:00,953 - MainThread - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-29 12:19:00,953 - MainThread - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 12:19:00,954 - MainThread - INFO -  * Restarting with stat
+2024-11-29 12:19:01,225 - MainThread - WARNING -  * Debugger is active!
+2024-11-29 12:19:01,228 - MainThread - INFO -  * Debugger PIN: 914-754-614
+2024-11-29 12:21:45,179 - MainThread - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-29 12:21:45,181 - MainThread - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 12:21:45,182 - MainThread - INFO -  * Restarting with stat
+2024-11-29 12:21:45,455 - MainThread - WARNING -  * Debugger is active!
+2024-11-29 12:21:45,458 - MainThread - INFO -  * Debugger PIN: 914-754-614
+2024-11-29 12:22:17,502 - Thread-2 (process_request_thread) - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:22:17,504 - Thread-2 (process_request_thread) - INFO - 127.0.0.1 - - [29/Nov/2024 12:22:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-11-29 12:22:17,616 - Thread-3 (process_request_thread) - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:22:17,617 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [29/Nov/2024 12:22:17] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-29 12:25:06,247 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-29 12:25:06,248 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 12:25:06,250 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 12:25:06,513 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 12:25:06,515 - werkzeug - INFO -  * Debugger PIN: 914-754-614
+2024-11-29 12:25:34,625 - __main__ - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:25:34,634 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:25:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-11-29 12:25:34,759 - __main__ - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:25:34,765 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:25:34] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-29 12:25:48,943 - __main__ - INFO - Received request: http://127.0.0.1:5000/hello
+2024-11-29 12:25:48,944 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:25:48] "GET /hello HTTP/1.1" 200 -
+2024-11-29 12:25:48,999 - __main__ - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:25:49,006 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:25:49] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-29 12:26:00,847 - __main__ - WARNING - Simulated error requested
+2024-11-29 12:26:00,848 - __main__ - ERROR - An error occurred: Simulated error
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\абЯ.py", line 35, in generate_error
+    raise RuntimeError("Simulated error")
+RuntimeError: Simulated error
+2024-11-29 12:26:00,853 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:26:00] "[35m[1mGET /testError HTTP/1.1[0m" 500 -
+2024-11-29 12:26:00,979 - __main__ - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:26:00,984 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:26:00] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-29 12:26:23,271 - __main__ - ERROR - An error occurred: 'builtin_function_or_method' object has no attribute 'sleep'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\абЯ.py", line 41, in wrapper
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\абЯ.py", line 51, in execution_time
+    time.sleep(0.5)
+    ^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'sleep'
+2024-11-29 12:26:23,276 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:26:23] "[35m[1mGET /time HTTP/1.1[0m" 500 -
+2024-11-29 12:26:23,397 - __main__ - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:26:23,403 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:26:23] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-29 12:29:43,619 - werkzeug - INFO -  * Detected change in 'c:\\Users\\User\\Desktop\\ью\\app.py', reloading
+2024-11-29 12:29:43,660 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 12:29:43,938 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 12:29:43,941 - werkzeug - INFO -  * Debugger PIN: 914-754-614
+2024-11-29 12:30:35,496 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-29 12:30:35,498 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 12:30:35,499 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 12:30:35,814 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 12:30:35,818 - werkzeug - INFO -  * Debugger PIN: 914-754-614
+2024-11-29 12:30:49,438 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:30:49] "GET / HTTP/1.1" 200 -
+2024-11-29 12:30:49,556 - __main__ - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:30:49,563 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:30:49] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-29 12:30:52,791 - __main__ - INFO - Received request to /hello
+2024-11-29 12:30:52,793 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:30:52] "GET /hello HTTP/1.1" 200 -
+2024-11-29 12:30:54,697 - __main__ - WARNING - Simulated error requested
+2024-11-29 12:30:54,698 - __main__ - ERROR - An error occurred: Simulated error
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 39, in generate_error
+    raise RuntimeError("Simulated error")
+RuntimeError: Simulated error
+2024-11-29 12:30:54,707 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:30:54] "[35m[1mGET /testError HTTP/1.1[0m" 500 -
+2024-11-29 12:30:56,229 - __main__ - ERROR - An error occurred: 'builtin_function_or_method' object has no attribute 'sleep'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 45, in wrapper
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 54, in execution_time
+    time.sleep(0.5)
+    ^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'sleep'
+2024-11-29 12:30:56,234 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:30:56] "[35m[1mGET /time HTTP/1.1[0m" 500 -
+2024-11-29 12:30:59,728 - __main__ - INFO - Received request to /hello
+2024-11-29 12:30:59,729 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:30:59] "GET /hello HTTP/1.1" 200 -
+2024-11-29 12:31:00,840 - __main__ - WARNING - Simulated error requested
+2024-11-29 12:31:00,840 - __main__ - ERROR - An error occurred: Simulated error
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 39, in generate_error
+    raise RuntimeError("Simulated error")
+RuntimeError: Simulated error
+2024-11-29 12:31:00,843 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:31:00] "[35m[1mGET /testError HTTP/1.1[0m" 500 -
+2024-11-29 12:31:01,646 - __main__ - ERROR - An error occurred: 'builtin_function_or_method' object has no attribute 'sleep'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 45, in wrapper
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 54, in execution_time
+    time.sleep(0.5)
+    ^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'sleep'
+2024-11-29 12:31:01,657 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:31:01] "[35m[1mGET /time HTTP/1.1[0m" 500 -
+2024-11-29 12:32:10,212 - werkzeug - INFO -  * Detected change in 'c:\\Users\\User\\Desktop\\ью\\app.py', reloading
+2024-11-29 12:32:10,241 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 12:32:10,516 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 12:32:10,520 - werkzeug - INFO -  * Debugger PIN: 914-754-614
+2024-11-29 12:32:15,030 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:32:15] "GET / HTTP/1.1" 200 -
+2024-11-29 12:32:15,067 - __main__ - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:32:15,073 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:32:15] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-29 12:32:16,460 - __main__ - INFO - Received request to /hello
+2024-11-29 12:32:16,462 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:32:16] "GET /hello HTTP/1.1" 200 -
+2024-11-29 12:32:17,832 - __main__ - WARNING - Simulated error requested
+2024-11-29 12:32:17,833 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:32:17] "[35m[1mGET /testError HTTP/1.1[0m" 500 -
+2024-11-29 12:32:21,812 - __main__ - WARNING - Simulated error requested
+2024-11-29 12:32:21,813 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:32:21] "[35m[1mGET /testError HTTP/1.1[0m" 500 -
+2024-11-29 12:32:23,297 - __main__ - ERROR - An error occurred: 'builtin_function_or_method' object has no attribute 'sleep'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 46, in wrapper
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 55, in execution_time
+    time.sleep(0.5)
+    ^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'sleep'
+2024-11-29 12:32:23,308 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:32:23] "[35m[1mGET /time HTTP/1.1[0m" 500 -
+2024-11-29 12:40:29,469 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:40:29] "GET / HTTP/1.1" 200 -
+2024-11-29 12:40:29,513 - __main__ - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 12:40:29,516 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:40:29] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-29 12:40:31,043 - __main__ - INFO - Received request to /hello
+2024-11-29 12:40:31,044 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:40:31] "GET /hello HTTP/1.1" 200 -
+2024-11-29 12:40:33,548 - __main__ - WARNING - Simulated error requested
+2024-11-29 12:40:33,549 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:40:33] "[35m[1mGET /testError HTTP/1.1[0m" 500 -
+2024-11-29 12:40:37,792 - __main__ - ERROR - An error occurred: 'builtin_function_or_method' object has no attribute 'sleep'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 46, in wrapper
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 55, in execution_time
+    time.sleep(0.5)
+    ^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'sleep'
+2024-11-29 12:40:37,797 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 12:40:37] "[35m[1mGET /time HTTP/1.1[0m" 500 -
+2024-11-29 13:10:28,803 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-29 13:10:28,804 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 13:10:28,804 - werkzeug - INFO -  * Restarting with stat
+2024-11-29 13:10:29,134 - werkzeug - WARNING -  * Debugger is active!
+2024-11-29 13:10:29,137 - werkzeug - INFO -  * Debugger PIN: 914-754-614
+2024-11-29 13:10:29,150 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 13:10:29] "GET / HTTP/1.1" 200 -
+2024-11-29 13:10:29,268 - __main__ - ERROR - An error occurred: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-11-29 13:10:29,274 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 13:10:29] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2024-11-29 13:17:51,726 - __main__ - INFO - Received request to /hello
+2024-11-29 13:17:51,727 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 13:17:51] "GET /hello HTTP/1.1" 200 -
+2024-11-29 13:17:56,704 - __main__ - WARNING - Simulated error requested
+2024-11-29 13:17:56,705 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 13:17:56] "[35m[1mGET /testError HTTP/1.1[0m" 500 -
+2024-11-29 13:18:00,362 - __main__ - ERROR - An error occurred: 'builtin_function_or_method' object has no attribute 'sleep'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 46, in wrapper
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\Desktop\ью\app.py", line 55, in execution_time
+    time.sleep(0.5)
+    ^^^^^^^^^^
+AttributeError: 'builtin_function_or_method' object has no attribute 'sleep'
+2024-11-29 13:18:00,366 - werkzeug - INFO - 127.0.0.1 - - [29/Nov/2024 13:18:00] "[35m[1mGET /time HTTP/1.1[0m" 500 -
